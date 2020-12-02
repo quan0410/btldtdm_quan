@@ -1,0 +1,1031 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: block;
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: #555;
+}
+p{
+    color: #555;
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-2{
+    flex-basis: 50%;
+    min-width: 300xp;
+}
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 0;
+}
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+
+}
+.btn{
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;    
+}
+.btn:hover{
+    background: #563434;
+
+}
+.header{
+    background: radial-gradient(#fff,#ffd6d6);
+
+}
+.header row{
+    margin-top: 70px;
+}
+
+.categories{
+    margin: 70px 0;
+}
+.col-3{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+
+}
+.col-3 img{
+    width: 100%;
+}
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.col-4{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+.col-4 img{
+    width: 100%;
+}
+.title{
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+.title::after{
+    content: '';
+    background: #ff523b;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+h4{
+    color: #555;
+    font-weight: normal;
+}
+.col-4 p{
+    font-size: 14px;
+}
+.rating .fa{
+    color: #ff523b;
+}
+.col-4:hover{
+    transform: translateY(-5px);
+}
+
+
+/* MODAL login*/
+.modal-open .modal{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.modal{
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1050;
+    outline: 0;
+    /* Cách đều tứ phía */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#login-form .modal-dialog{
+    max-width: 900px !important;
+    margin: 30px auto;
+}
+
+@media (min-width: 768px){
+    .modal-dialog{
+        width: 600px;
+        margin: 30px auto;
+    }
+}
+
+.modal-dialog{
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+
+#login-form .modal-content{
+    background: rgb(248, 248, 248);
+    box-sizing: border-box;
+}
+
+.modal-content{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(153, 153, 153);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    outline: 0;
+    box-sizing: border-box;
+}
+
+/* Đóng modal */
+.close:hover,
+.close:focus {
+  color: rgb(255, 72, 0);
+  cursor: pointer;
+}
+
+#login-form .modal-dialog .close{
+    position: absolute;
+    z-index: 2;
+    top: -17px;
+    right: -17px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    opacity: 1;
+    background-color: rgb(226, 226, 226);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+button .close{
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+}
+
+.close{
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 1px 0 rgb(255, 255, 255);
+}
+
+/* end close modal */
+
+/* modal body */
+
+#login-form .modal-dialog .modal-body{
+    overflow: hidden;
+    padding: 0;
+}
+
+.modal-body{
+    position: relative;
+    padding: 15px;
+    height: 642px;
+}
+
+.modal-dialog .modal-body .content-left{
+    float: left;
+    width: 360px;
+    height: 552px;
+    padding: 45px 30px;
+    background: rgb(255, 255, 255); /* rgb(255, 255, 255) == #fff */
+    border-radius: 6px;
+}
+
+.modal-dialog .modal-body .content-left h2{
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 35.2px;
+    color: rgb(36, 36, 36);
+    margin-top: 0;
+}
+
+h2{
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-weight: bold;
+}
+                                    
+.modal-dialog .modal-body .content-left p{                                        
+    font-size: 16px;                                        
+    font-weight: 300;                                        
+    line-height: 1.38;                                        
+    color: rgb(120, 120, 120);                             
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 1em;
+    margin: 0 0 10px;
+}
+
+.modal-dialog .modal-body .content-left img{
+    margin-top:70px;
+    margin-bottom: 20px;
+}
+
+img{
+    margin: auto;
+    vertical-align: middle;
+    border-style: none;
+}
+
+#login-form .modal-dialog .modal-body .content-right{
+    width: calc(100% - 390px);
+    float: left;
+    height: 600px;
+    margin: 15px;
+    overflow: hidden;
+    background: rgb(255, 255, 255);
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+#login-form .modal-dialog .modal-body .content-right .tab{
+    width: 100%;
+    border-bottom: 1px solid rgb(244, 244, 244);
+    overflow: hidden;
+}
+
+#login-form .modal-dialog .modal-body .content-right .tab .tab-item.active,
+ #login-form .modal-dialog .modal-body .content-right .tab .tab-item:hover{
+    border-bottom: 3px solid rgb(77, 117, 185);
+    color: rgb(77, 117, 185);
+    cursor: pointer;
+}
+
+#login-form .modal-dialog .modal-body .content-right .tab .tab-item{
+    float: left;
+    font-size: 16px;
+    font-weight: 500;
+    width: 150px;
+    text-align: center;
+    color: rgb(51, 51, 51);
+    border-bottom: 3px solid rgb(255, 255, 255);
+    padding: 15px 5px 7px;
+    margin-left: 20px;
+    display: block;
+    text-decoration: none;
+    box-sizing: border-box; 
+}
+
+#login-form .modal-dialog .modal-body .content-right form{
+    margin: 35px;
+    box-sizing: border-box;
+}
+
+#login-form .modal-dialog .modal-body .content-right .form-group{
+    float: right;
+    width: 83%;
+}
+
+.form-group{
+    position: relative;
+    margin-bottom: 15px;
+}
+
+#login-form .modal-dialog .modal-body .content-right .username-login, #login-form .modal-dialog .modal-body .content-right .password-login{
+    float: none;
+    width: 100%;
+}
+
+#login-form .modal-dialog .modal-body .content-right form label{
+    font-size: 13px;
+    color: rgb(51, 51, 51);
+    font-weight: 400;
+    width: 70px;
+}
+
+label{
+    max-width: 100%;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+#login-form .modal-dialog .modal-body .content-right form .form-control{
+    display: inline-block;
+    width: 83%;
+}
+
+.form-control{
+    font-size: 13px;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 4px;
+    border-color: rgb(169, 68, 66);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    padding-right: 42.5px;
+    line-height: 1.24857;
+    color: rgb(85, 85, 85);
+}
+
+#login-form .modal-dialog .modal-body .content-right .form-group .reset{
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#login-form .content .reset a {
+    color: #1ba8ff;
+}
+
+.form-group .btn {
+    text-decoration: none;
+    font-size: 15px;;
+}
+
+#login-form .btn-login{
+    color: rgb(255, 255, 255);
+    background: rgb(254, 152, 15);
+    background-color: rgb(254, 152, 15);
+    border-color: rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+.btn-block{
+    display: block;
+    width: 100%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-bottom: 5px;
+}
+
+.btn-login-facebook{
+    color: rgb(255, 255, 255);
+    background-color: rgb(76, 102, 164);
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-login-google{
+    color: rgb(255, 255, 255);
+    background-color: rgb(204, 64, 47);
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Register form */
+#register-form .modal-dialog{
+    max-width: 900px !important;
+    margin: 30px auto;
+}
+
+#register-form .modal-content{
+    background: rgb(248, 248, 248);
+}
+
+#register-form .modal-dialog .close{
+    position: absolute;
+    z-index: 2;
+    right: -17px;
+    top: -17px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    opacity: 1;
+    background-color: rgb(226, 226, 226);
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.5);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+#register-form .modal-dialog .modal-body{
+    overflow: hidden;
+    padding: 0;
+}
+
+#register-form .modal-dialog .modal-body .content-right{
+    width: calc(100% - 390px);
+    float: left;
+    height: 600px;
+    margin: 15px;
+    overflow: hidden;
+    background: rgb(255, 255, 255);
+    border-radius: 6px;   
+}
+
+#register-form .modal-dialog .modal-body .content-right .tab{
+    width: 100%;
+    border-bottom: 1px solid rgb(244, 244, 244);
+    overflow: hidden;
+}
+
+#register-form .modal-dialog .modal-body .content-right .tab .tab-item{
+    float: left;
+    font-size: 16px;
+    width: 150px;
+    text-align: center;
+    border-bottom: solid 3px rgb(255, 255, 255);
+    padding: 15px 5px 7px;
+    color: rgb(120, 120, 120);
+    margin-left: 20px;
+    font-weight: 300;
+    display: block;
+    text-decoration: none;
+}
+
+#register-form .modal-dialog .modal-body .content-right .tab .tab-item.active,
+#register-form .modal-dialog .modal-body .content-right .tab .tab-item:hover{
+    border-bottom: solid 3px rgb(26, 167, 255);
+    color: rgb(27, 168, 255);
+    cursor: pointer;
+}
+
+/* form rigister */
+#register-form .modal-dialog .modal-body .content-right form{
+    margin: 40px 30px;
+}
+
+#register-form .content .left-col{
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+#register-form .modal-dialog .modal-body .content-right form .form-group{
+    width: 100%;
+    float: right;
+}
+
+#rigister-form .form-group{
+    font-weight: 400;
+    line-height: 400;
+    float: left;
+    margin-bottom: 15px;
+}
+
+#register-form .modal-dialog .modal-body .content-right form label{
+    font-size: 13px;
+    color: rgb(51, 51, 51);
+    width: 72px;
+    font-weight: 400 !important;
+}
+
+#register-form .content .input-wrap{
+    position: relative;
+    float: right;
+    width: 375px;
+    margin: 0;
+}
+
+#register-form .modal-dialog .modal-body .content-right form .form-control{
+    display: inline-block;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid rgb(200, 200, 200);
+    height: 34px;
+    padding-right: 42.5px;
+}
+
+#register-form .form-group.use-phone input{
+    width: 65%!important;
+    float: left;
+    border-radius: 3px 0 0 3px!important;
+    margin-bottom: 5px;
+}
+
+#register-form .form-group.use-phone a{
+    /* float: left; */
+    text-align: center;
+    width: 35%;
+    color: rgb(74, 74, 74);
+    background: rgb(253, 216, 53);
+    border-color: rgb(253, 216, 53);
+    border-radius: 0 4px 4px 0;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+#register-form .row{
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.iradio_square-blue {
+    background-position: -120px 0;
+}
+
+.col-xs-4{
+    position: relative;
+    float: left;
+    width: 33.33333%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#register-form .content .input-wrap .icheck-wrap{
+    position: relative;
+    font-size: 12px !important;
+    width: 100% !important;
+}
+
+#register-form .content label{
+    margin-bottom: 0;
+}
+
+.gender-select-wrap .gender-select{
+    padding-left: 0 !important;
+    margin-top: 7px;
+    font-weight: 700 !important;
+}
+
+.gender-select-wrap .gender-select div {
+    margin-right: 5px;
+    margin-top: -1px;
+}
+
+.iradio_square-blue {
+    background-position: -120px 0;
+}
+
+
+.icheckbox_square-blue, .iradio_square-blue {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 22px;
+    height: 22px;
+    border: none;
+    cursor: pointer;
+}
+
+.gender{
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    display: block;
+    width: 140%;
+    height: 140%;
+    margin: 0px;
+    padding: 0px;
+    background: rgb(255, 255, 255);
+    border: 0px;
+    opacity: 0;
+}
+
+fieldset{
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border:0;
+}
+
+#register-form .content .birthday-picker .form-control{
+    width: 30% !important;
+    padding-right: 0 !important; 
+}
+
+#register-form .btn-info{
+    color: rgb(74, 74, 74);
+    background: rgb(253, 216, 53);
+    border-color: rgb(253, 216, 53);
+}
+
+#register-form .content .policy{
+    margin-bottom: 0;
+    font-size: 12px;
+    display: inline-block;
+    line-height: 22px;
+}
+
+#register-form .content .policy a{
+    color: rgb(0, 127, 240) !important;
+}
+
+
+/* --------- offer ---------- */
+.offer{
+    background: radial-gradient(#fff,#ffd6d6);
+    margin-top: 80px;
+    padding: 35px 0;   
+}
+.col-2 .offer-img{
+    padding: 50px;
+}
+small{
+    color: #555;
+}
+/* ------------------testimonial-------------- */
+.testimonial{
+    padding-top: 100px;
+}
+.testimonial .col-3{
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+.testimonial .col-3 img{
+    width: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+.testimonial .col-3:hover{
+    transform: translateY(-10px);
+}
+.fa.fa-qoute-lef{
+    font-size: 34px;
+    color: #ff523b;
+}
+.col-3 p{
+    font-size: 12px;
+    margin: 12px 0;
+    color: #777;
+}
+.testimonial .col-3 h3{
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+}
+/* ---------------brands-------------------- */
+.brands{
+    margin: 100px auto;
+}
+.col-5{
+    width: 160px;
+}
+.col-5 img{
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+.col-5 img:hover{
+    filter: grayscale(0);
+}
+/* ---------------footer------------ */
+
+.footer{
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+.footer p{
+    color: #8a8a8a;
+}
+.footer h3{
+    color: #fff;
+}
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+.footer-col-1{
+    flex-basis: 30%;
+}
+.footer-col-2{
+    flex: 1;
+    text-align: center;
+}
+.footer-col-2 img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+.footer-col-3, .footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+}
+.app-logo{
+    margin-top: 20px;
+}
+.app-logo img{
+    width: 140px;
+}
+.footer hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+.Copyright{
+    text-align: center;
+}
+.menu-icon{
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+
+
+/* ---------------All Products Page------------------- */
+.row-2{
+    justify-content: space-between;
+    margin: 100px auto 50px;
+}
+select{
+    border: 1px solid #ff523b;
+    padding: 5px;
+}
+select:focus{
+    outline: none;
+}
+.page-btn{
+    margin: 0 auto 80px;
+
+}
+.page-btn span{
+    display: inline-block;
+    border: 1px solid #ff523b;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+.page-btn span:hover{
+    background: #ff523b;
+    color: #fff;
+}
+
+/* -- ---------- single Products detail ----------- -- */
+.single-product{
+    margin-top: 80px;
+
+}
+.single-product .col-2 img{
+    padding: 0;
+}
+.single-product .col-2{
+    padding: 20px;
+}
+.single-product h4{
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+.single-product select{
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+}
+.single-product input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+    border: 1px solid #ff523f;
+}
+input:focus{
+    outline: none;
+}
+.single-product .fa{
+    color: #ff523b;
+    margin-left: 10px;
+}
+.small-img-row{
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-rol{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+/* -----------------cart item details------------------- - */
+.cart-page{
+    margin: 80px auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+th{
+    text-align: center;
+    padding: 5px;
+    color: #fff;
+    background: #ff523b;
+    font-weight: normal;
+}
+td{
+    padding: 10px 5px;
+}
+td input{
+    width: 60px;
+    height: 30px;
+    padding: 5px;
+
+}
+td a{
+    color: #ff523b;
+    font-size: 12px;
+}
+td img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+.total-price table{
+    border-top: 3xp solid #ff523b;
+    width: 100%;
+    max-width: 350px;
+}
+td:last-child{
+    text-align: right;
+}
+.th:last-child{
+    text-align: right;
+}
+
+
+/* -----------------------Account-page------------------ */
+
+.account-page{
+    padding: 50px 0;
+    background: radial-gradient(#fff,#ffd6d6);
+
+}
+.form-container{
+    background: #fff;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+    box-shadow: 0 0 20 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.form-container span{
+    font-weight: bold;
+    padding: 0 10px;
+    color: #555;
+    cursor: pointer;
+    display: inline;
+}
+.form-btn{
+    display: inline-block;
+}
+.form-container form{
+    max-width: 300px;
+    padding: 0 20px;
+    position: absolute;
+    top: 130px;
+    transition: transform 1s;
+
+}
+form input{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+}
+form .btn{
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+form .btn:focus{
+    outline: none;
+}
+#LoginForm{
+    left: -300px;
+}
+#RegForm{
+    left: 0;
+}
+form a{
+    font-size: 12px;
+}
+#Indicator{
+    width: 100px;
+    border: none;
+    background: #ff523b;
+    height: 3px;
+    margin-top: 8px;
+    transform: translateX(100px);
+    transition: transform 1s;
+}
+
+
+/* --------------- Media query FOR menu -------------- */
+@media only screen and (max-width: 800px){
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li{
+        color: #fff;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+}
+/* --------------- Media query FOR less than 600 screen siza -------------- */
+@media only screen and (max-width: 600px){
+    .row{
+        text-align: center;
+    }
+    .col-2, .col-3, .col-4{
+        flex-basis: 100%;
+    }
+    .single-product .row{
+        text-align: left;
+    }
+    .single-product .col-2{
+        padding: 20px 0;
+    }
+    .single-product h1{
+        font-size: 26px;
+        line-height: 32px;
+    }
+    .cart-info p{
+        display: none;
+    }
+}
